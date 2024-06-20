@@ -405,206 +405,292 @@ function GenerateCv()
     }
     const handleClickLayout=(e)=>{
         console.log(e)
-
-        const layout1= {
-            
+        const layout1 = {
+          container: {
+            maxWidth: "50vw",
+            margin: "0 auto",
+            padding: "20px",
+            backgroundColor: "#ffe5ec",
+            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            borderRadius: "5px",
+          },
+          subheading: {
+            fontSize: "0.75em",
+            color: "#333",
+            backgroundColor:"#ffc2d1",
+            borderBottom: "2px solid #eee",
+            paddingBottom: "10px",
+            marginBottom: "20px",
+            padding:"10px",
+           
+          },
+          icon: {
+            fontSize: "24px",
+            marginRight: "8px",
+            verticalAlign: "middle",
+            color: "#fb6f92",
+          },
+          link: {
+            color: "#007bff",
+            textDecoration: "none",
+            fontWeight: "bold",
+          },
+          title: {
+            fontSize: "1.5em",
+            fontWeight: "bold",
+            color: "#ff8fab",
+            marginBottom: "15px",
+          },
+          dataContainer: {
+            marginBottom: "20px",
+          },
+          item: {
+            marginBottom: "10px",
+          },
+          dateLocation: {
+            color: "#fb6f92",
+            fontSize: "16px",
+          },
+          details: {
+            fontWeight: "normal",
+            fontSize: "18px",
+            color: "#9d8189",
+          },
+          companyName: {
+            fontWeight: "bold",
+          },
+          position: {
+            fontWeight: "500",
+          },
+          descriptionExp: {
+            marginTop: "5px",
+            fontSize: "16px",
+            color: "#fb6f92",
+          },
+        
+          '@media (max-width: 800px)': {
+            subheading:{
+              display:"flex",
+              justifyContent:"center",
+            },
             container: {
-                maxWidth: "50vw",
-              margin: "0 auto",
-              padding: "20px",
-              backgroundColor: "#ffe5ec",
-              fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              borderRadius: "5px",
-            },
-            subheading: {
-              fontSize: "0.75em",
-              color: "#333",
-              backgroundColor:"#ffc2d1",
-              borderBottom: "2px solid #eee",
-              paddingBottom: "10px",
-              marginBottom: "20px",
-              padding:"10px",
-            },
-            icon: {
-              fontSize: "24px",
-              marginRight: "8px",
-              verticalAlign: "middle",
-              color: "#fb6f92",
-            },
-            link: {
-              color: "#007bff",
-              textDecoration: "none",
-              fontWeight: "bold",
+              maxWidth: "80vw",
+              padding: "15px",
             },
             title: {
-              fontSize: "1.5em",
-              fontWeight: "bold",
-              color: "#ff8fab",
-              marginBottom: "15px",
-            },
-            dataContainer: {
-              marginBottom: "20px",
-            },
-            item: {
-              marginBottom: "10px",
-            },
-            dateLocation: {
-              color: "#fb6f92",
-              fontSize: "16px",
+              fontSize: "1.25em",
             },
             details: {
-              fontWeight: "normal",
-              fontSize: "18px",
-              color: "#9d8189",
-              
-            },
-            companyName: {
-              fontWeight: "bold",
-            },
-            position: {
-              fontWeight: "500",
-            },
-            descriptionExp: {
-              marginTop: "5px",
               fontSize: "16px",
-              color: "#fb6f92",
-            }
+            },
+          },
+        
+          '@media (max-width: 500px)': {
+            container: {
+              maxWidth: "95vw",
+              padding: "10px",
+            },
+            title: {
+              fontSize: "1em",
+            },
+            subheading: {
+              fontSize: "0.65em",
+            },
+            details: {
+              fontSize: "14px",
+            },
+          },
+        };
+        
+        
           
+        const layout2 = {
+          container: {
+            maxWidth: "50vw",
+            margin: "0 auto",
+            padding: "20px",
+            backgroundColor: "#003049",
+            fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            borderRadius: "5px",
+          },
+          subheading: {
+            fontSize: "0.75em",
+            color: "#333",
+            backgroundColor:"#fcbf49",
+            borderBottom: "2px solid #eee",
+            paddingBottom: "10px",
+            marginBottom: "20px",
+            padding:"10px",
+          },
+          icon: {
+            fontSize: "24px",
+            marginRight: "8px",
+            verticalAlign: "middle",
+            color: "#14213D",
+          },
+          link: {
+            color: "#007bff",
+            textDecoration: "none",
+            fontWeight: "bold",
+          },
+          title: {
+            fontSize: "22px",
+            fontWeight: "bold",
+            color: "#fcbf49",
+            marginBottom: "15px",
+          },
+          dataContainer: {
+            marginBottom: "20px",
+          },
+          item: {
+            marginBottom: "10px",
+          },
+          dateLocation: {
+            color: "#f77f00",
+            fontSize: "16px",
+          },
+          details: {
+            fontWeight: "normal",
+            fontSize: "1em",
+            color: "#f77f00",
+          },
+          companyName: {
+            fontWeight: "bold",
+          },
+          position: {
+            fontWeight: "500",
+          },
+          descriptionExp: {
+            marginTop: "5px",
+            fontSize: "1em",
+            color: "#f77f00",
+          },
+        
+          '@media (max-width: 800px)': {
+            container: {
+              maxWidth: "80vw",
+              padding: "15px",
+            },
+            title: {
+              fontSize: "20px",
+            },
+            details: {
+              fontSize: "0.9em",
+            },
+          },
+        
+          '@media (max-width: 500px)': {
+            container: {
+              maxWidth: "95vw",
+              padding: "10px",
+            },
+            title: {
+              fontSize: "18px",
+            },
+            subheading: {
+              fontSize: "0.65em",
+            },
+            details: {
+              fontSize: "0.8em",
+            },
+          },
         };
         
           
-          const layout2 = {
-            
-              container: {
-                maxWidth: "50vw",
-                margin: "0 auto",
-                padding: "20px",
-                backgroundColor: "#003049",
-                fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                borderRadius: "5px",
-              },
-              subheading: {
-                fontSize: "0.75em",
-                color: "#333",
-                backgroundColor:"#fcbf49",
-                borderBottom: "2px solid #eee",
-                paddingBottom: "10px",
-                marginBottom: "20px",
-                padding:"10px",
-              },
-              icon: {
-                fontSize: "24px",
-                marginRight: "8px",
-                verticalAlign: "middle",
-                color: "#14213D",
-              },
-              link: {
-                color: "#007bff",
-                textDecoration: "none",
-                fontWeight: "bold",
-              },
-              title: {
-                fontSize: "22px",
-                fontWeight: "bold",
-                color: "#fcbf49",
-                marginBottom: "15px",
-              },
-              dataContainer: {
-                marginBottom: "20px",
-              },
-              item: {
-                marginBottom: "10px",
-              },
-              dateLocation: {
-                color: "#f77f00",
-                fontSize: "16px",
-              },
-              details: {
-                fontWeight: "normal",
-                fontSize: "1em",
-                color: "#f77f00",
-              },
-              companyName: {
-                fontWeight: "bold",
-              },
-              position: {
-                fontWeight: "500",
-              },
-              descriptionExp: {
-                marginTop: "5px",
-                fontSize: "1em",
-                color: "#f77f00",
-                
-              }
-            
-          };
-          
-
-          const layout3 = {
-              container: {
-                maxWidth: "50vw",
-                margin: "25px auto",
-                padding: "30px",
-                backgroundColor: "#03045e",
-                fontFamily: "'Merriweather', serif",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
-                borderRadius: "10px",
-              },
-              subheading: {
-                fontSize: "17px",
-                backgroundColor:"#03045e",
-                color: "#2a9d8f",
-                borderBottom: "2px solid #eaeaea",
-                paddingBottom: "10px",
-                marginBottom: "20px",
-              },
-              icon: {
-                fontSize: "22px",
-                marginRight: "12px",
-                verticalAlign: "middle",
-                color: "#0077b6",
-              },
-              link: {
-                color: "#d67e00",
-                textDecoration: "none",
-                fontWeight: "bold",
-              },
+        const layout3 = {
+          container: {
+            maxWidth: "50vw",
+            margin: "25px auto",
+            padding: "30px",
+            backgroundColor: "#03045e",
+            fontFamily: "'Merriweather', serif",
+            boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
+            borderRadius: "10px",
+          },
+          subheading: {
+            fontSize: "17px",
+            backgroundColor:"#03045e",
+            color: "#2a9d8f",
+            borderBottom: "2px solid #eaeaea",
+            paddingBottom: "10px",
+            marginBottom: "20px",
+          },
+          icon: {
+            fontSize: "22px",
+            marginRight: "12px",
+            verticalAlign: "middle",
+            color: "#0077b6",
+          },
+          link: {
+            color: "#d67e00",
+            textDecoration: "none",
+            fontWeight: "bold",
+          },
+          title: {
+            fontSize: "21px",
+            fontWeight: "bold",
+            color: "#0096c7",
+            marginBottom: "14px",
+          },
+          dataContainer: {
+            marginBottom: "20px",
+          },
+          item: {
+            marginBottom: "9px",
+          },
+          dateLocation: {
+            color: "#90e0ef",
+            fontSize: "15px",
+          },
+          details: {
+            fontWeight: "normal",
+            fontSize: "17px",
+            color: "#90e0ef",
+          },
+          companyName: {
+            fontWeight: "bold",
+          },
+          position: {
+            fontWeight: "500",
+          },
+          descriptionExp: {
+            marginTop: "5px",
+            fontSize: "16px",
+            color: "#ade8f4",
+          },
+        
+          '@media (max-width: 800px)': {
+            container: {
+              maxWidth: "80vw",
+              padding: "20px",
+            },
             title: {
-                fontSize: "21px",
-                fontWeight: "bold",
-                color: "#0096c7",
-                marginBottom: "14px",
-              },
-              dataContainer: {
-                marginBottom: "20px",
-              },
-              item: {
-                marginBottom: "9px",
-              },
-              dateLocation: {
-                color: "#90e0ef",
-                fontSize: "15px",
-              },
-              details: {
-                fontWeight: "normal",
-                fontSize: "17px",
-                color: "#90e0ef",
-              },
-              companyName: {
-                fontWeight: "bold",
-              },
-              position: {
-                fontWeight: "500",
-              },
-              descriptionExp: {
-                marginTop: "5px",
-                fontSize: "16px",
-                color: "#ade8f4",
-              }
-            
-          };
+              fontSize: "19px",
+            },
+            details: {
+              fontSize: "15px",
+            },
+          },
+        
+          '@media (max-width: 500px)': {
+            container: {
+              maxWidth: "95vw",
+              padding: "15px",
+            },
+            title: {
+              fontSize: "17px",
+            },
+            subheading: {
+              fontSize: "15px",
+            },
+            details: {
+              fontSize: "14px",
+            },
+          },
+        };
+        
           
          e === "Layout 1" ? setStyleDisplay(layout1) : e === "Layout 2" ? setStyleDisplay(layout2) : setStyleDisplay(layout3);
 
